@@ -1,0 +1,9 @@
+.rounded_link {
+    width: 4rem!important;
+    height: 4rem !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 1rem;
+    border-radius: 50rem;
+}
