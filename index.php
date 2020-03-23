@@ -19,6 +19,12 @@ if(isset($_GET['page']) && in_array($_GET['page'].".php", $pages)){
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/<?=$page?>.css"/>
+    <meta property="og:type" content="Covid-19" />
+    <meta property="og:title" content="Cameroon - Makers Against Covid-19 in Cameroon" />
+    <meta property="og:description" content="Obtenez un diagnostique rapide et des conseils sur les précautions à prendre. Vous avez également la liste des centres d'examens rangés par région qui prennent en charge les patients atteint de Covid-19 au Cameroun." />
+    <meta property="og:url" content="https://lamater.tech/covid19" />
+    <meta property="og:image" content="https://lamater.tech/covid19/img/virus.svg" />
+    <meta property="og:site_name" content="Cameroon - Makers Against Covid-19 in Cameroon" />
 </head>
 <body>
     <?php include("incs/header.inc.php")?>
