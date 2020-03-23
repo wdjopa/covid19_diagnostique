@@ -1,6 +1,8 @@
 body {
     background-color: #DDDDDDaa;
     font-family: "Quicksand";
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 .btn-rounded {
