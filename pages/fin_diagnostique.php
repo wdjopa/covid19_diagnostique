@@ -36,7 +36,7 @@
                 <img src="images/share.svg" height="25">   
            </a>
            
-           <a href="?page=chat" class="btn-success btn rounded_link">
+           <a href="?page=chat" class="btn-warning btn rounded_link">
                 <img src="images/blog.svg" height="25">   
            </a>
         </div>

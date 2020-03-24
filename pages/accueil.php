@@ -20,7 +20,7 @@
         <div class="col-11">
             <a href="?page=diagnostique" class="btn btn-rounded text-uppercase p-3 mb-2 mt-2 w-100 btn-primary">Commencer le diagnostique</a>
             <a href="?page=questions" class="btn btn-rounded text-uppercase  p-3 mb-2 mt-2 w-100 btn-danger">Poser les questions</a>
-            <a href="?page=examens" class="btn btn-rounded  text-uppercase p-3 mb-2  mt-2 w-100 btn-success">Liste des centres d'examens</a>
+            <a href="?page=examens" class="btn btn-rounded  text-uppercase p-3 mb-2  mt-2 w-100 btn-info">Liste des centres d'examens</a>
         </div>
     </div>
 

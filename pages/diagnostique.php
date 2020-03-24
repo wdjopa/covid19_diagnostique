@@ -38,7 +38,7 @@
     </div>
     <div class="row d-flex justify-content-center mt-2">
         <div class="col-11  d-flex justify-content-between mt-4 text-uppercase">
-            <a href="#!" onclick="revenir()"  class="btn pt-2 pb-2  mr-2 w-50 btn-rounded btn-info">Annuler</a>
+            <a href="#!" onclick="revenir()"  class="btn pt-2 pb-2  mr-2 w-50 btn-rounded btn-danger">Annuler</a>
             <a href="#!" onclick="questionSuivante()"  class="btn pt-2 pb-2  disabled btn-next w-50 ml-2 btn-rounded btn-primary">Continer</a>
         </div>
     </div>
