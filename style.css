@@ -1,5 +1,5 @@
-body {
-    background-color: #DDDDDDaa;
+body, html {
+    background-color: #efefefaa;
     font-family: "Quicksand";
     width: 100vw;
     overflow-x: hidden;
