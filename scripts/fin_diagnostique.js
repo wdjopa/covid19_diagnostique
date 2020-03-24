@@ -291,3 +291,24 @@ function malade(message) {
     .html(`<br>Restez chez vous au maximum en attendant que les symptômes disparaissent.
 Prenez votre température deux fois par jour. Rappel des mesures d’hygiène.`);
 }
+
+
+function  share() {
+    copyToClipboard()
+}
+ function copyToClipboard() {
+    let url = window.location.href;
+    let selBox = document.createElement('textarea');
+
+    selBox.style.position = 'fixed';
+    selBox.style.left = '0';
+    selBox.style.top = '0';
+    selBox.style.opacity = '0';
+    selBox.value = url;
+    document.body.appendChild(selBox);
+    selBox.focus();
+    selBox.select();
+    selBox.setSelectionRange(0, 99999); /*For mobile devices*/
+    document.execCommand('copy');
+    document.body.removeChild(selBox);
+ }
