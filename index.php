@@ -10,7 +10,7 @@ if(isset($_GET['page']) && in_array($_GET['page'].".php", $pages)){
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name=" theme-color" content="#0E9E2E">
+    <meta name="theme-color" content="#0E9E2E">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cameroun - Markers Against Covid-19</title>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
