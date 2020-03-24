@@ -13,13 +13,14 @@
     <div class="row d-flex justify-content-center ">
         <div class="col-11">
             <div class="card " style="box-shadow: 4px 4px 4px #888;">
-                <div class="card-body">
+                <div class="card-body resultat">
                     <div class="row d-flex justify-content-center mb-4">
-                        <img src="images/diagnosis.svg" alt="" width="80" class="img-fluid">
+                        <img src="" alt="" width="80" class="img-fluid img">
                     </div>
-                    <h4 class="h4 text-center avis">VOUS SEMBLEZ <span class="text-success">SAIN</span></h4>
-                    <p class="pt-2">
-                        Nous vous invitons à rester chez vous et à continuer à prendre soin de votre santé. Dès les premiers symptômes, contactez le <a class="text-danger bold" href="tel:1510">1510</a>.
+                    <h4 class="h4 text-center avis"></h4>
+                    <p class="pt-2 message">
+                    </p>
+                    <p class="pt-2 precision">
                     </p>
                 </div>
             </div>
@@ -31,11 +32,11 @@
                 <img src="images/restart.svg" height="25">   
            </a>
            
-           <a href="?page=diagnostique" class="btn-primary btn rounded_link">
+           <a href="#!" onclick="share()" class="btn-primary btn rounded_link">
                 <img src="images/share.svg" height="25">   
            </a>
            
-           <a href="?page=diagnostique" class="btn-success btn rounded_link">
+           <a href="?page=chat" class="btn-success btn rounded_link">
                 <img src="images/blog.svg" height="25">   
            </a>
         </div>
