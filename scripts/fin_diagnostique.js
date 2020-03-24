@@ -143,10 +143,10 @@ questions.forEach(question => {
 });
 
 // Algo décisionnel
-console.log(symptomes);
-console.log(gmineur);
-console.log(gmajeur);
-console.log(pronostiques);
+console.log("symptomes",symptomes);
+console.log("mineurs", gmineur);
+console.log("majeurs", gmajeur);
+console.log("pronostiques", pronostiques);
 
 if (symptomes.includes("fievre") && symptomes.includes("toux")) {
   if (
@@ -200,6 +200,11 @@ else if (
         "téléconsultation ou médecin généraliste ou visite à domicile (SOS médecins…) "
       );
     }
+    else{
+         milieu(
+           "téléconsultation ou médecin généraliste ou visite à domicile (SOS médecins…) "
+         );
+    }
   } else {
     if (gmineur.length == 0 && gmajeur.length == 0) {
       milieu(
@@ -215,6 +220,10 @@ else if (
       );
     } else if (gmajeur.length >= 1) {
       malade(" Appeler le 1510");
+    } else {
+      milieu(
+        "téléconsultation ou médecin généraliste ou visite à domicile (SOS médecins…) "
+      );
     }
   }
 } else if (symptomes.includes("toux", "gorge", "odorat")) {
@@ -233,6 +242,12 @@ test. `
       `Votre situation ne relève probablement pas du Covid-19. Un avis médical est
 recommandé. Au moindre doute, appelez le 1510.  `
     );
+  }else{
+      sain(
+        `Votre situation ne relève probablement pas du Covid-19. N’hésitez pas à contacter votre
+médecin en cas de doute. Vous pouvez refaire le test en cas de nouveau symptôme pour
+réévaluer la situation. `
+      );
   }
 } else if (symptomes.length == 0) {
   sain(
@@ -240,6 +255,11 @@ recommandé. Au moindre doute, appelez le 1510.  `
 médecin en cas de doute. Vous pouvez refaire le test en cas de nouveau symptôme pour
 réévaluer la situation. `
   );
+}else{
+    
+         milieu(
+           "téléconsultation ou médecin généraliste ou visite à domicile (SOS médecins…) "
+         );
 }
 
 function sain(message) {

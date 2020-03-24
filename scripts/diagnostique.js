@@ -26,7 +26,7 @@ startQuiz = (id)=>{
                 `;
     
     for(let i=0;i<question.choice.length;i++){
-        html += `<button class="btn btn-outline-primary rep r${i} mr-4" style="min-width: 40% ;" onclick="reponse(${id}, ${i})" >${question.choice[i]}</button>`;
+        html += `<button class="btn btn-outline-primary rep r${i+1} mr-4" style="min-width: 40% ;" onclick="reponse(${id}, ${i+1})" >${question.choice[i]}</button>`;
     }
     html+=`</div></p>`
     $(".question-card-body").html(html);
