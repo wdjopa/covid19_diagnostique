@@ -3,17 +3,76 @@ questionSuivante = () => {
     document.location.href="?page=fin_diagnostique"
 };
 let questions = [], current = 0;
-$.get("https://coapi.ngrok.io/questions", (a) => {
+
+/**
+ * storage_set
+ * This method will set parameters in the storage with localStorage
+ * key : The key of the parameter
+ * value : the value the parameter will contain if null, then prompt
+ * extra_string : The extra_string
+ * force : to force the update
+ */
+storage_set = (key, value=null, force=false, extra_string="") => {
+    // if it is not in localstorage or
+    // if it is in localstorage and we force the update
+    if (localStorage.getItem(key) == "null" || (localStorage.getItem(key) !== "null" && force) ){
+        // if the value is null, then prompt
+        if (value === null){
+            value = prompt("Veuillez entrer votre " + key + " " + extra_string + ": ");
+        }
+        
+        if (value !== "null" && value !== null){
+            localStorage.setItem(key, value);
+        }
+    }
+}
+
+/**
+ * prerequis_questions
+ * This method will only ask all necessary questions at the start
+ * force : this parameter is to force the update
+ */
+prerequis_questions = (force=false) => {
+    // Let set the age
+    storage_set("age", null, force);
+    // Let set poids
+    storage_set("poids", null, force);
+    // Let set taille
+    storage_set("taille", null, force, "(en cm)");
+    // We set caracteristiques
+    storage_set("caracteristiques", JSON.stringify({age : age, poids : poids, taille : taille}), force);
+
+    // if we update with force, then re-actualise the dom
+    if (force){
+        set_dom_from_storage(["age", "poids", "taille"]);
+    }
+}
+
+/**
+ * set_dom_from_storage
+ * Let's update each element in the DOM from localstorage
+ */
+set_dom_from_storage = (array_key) => {
+    for (let i=0; i<array_key.length; i++){
+        $("#"+array_key[i]).html(localStorage.getItem(array_key[i]));
+    }
+}
+
+$.get("https://coapi.ngrok.io/questions?count=19", (a) => {
     questions = a;
     // questions.splice(4,a.length-4)
     $(".total").html(questions.length+1);
     $(".num").html(current+1);
-    let age = prompt("Veuillez entrer votre age : ");
-    let poids = prompt("Veuillez entrer votre poids : ");
-    let taille = prompt("Veuillez entrer votre taille (en cm) : ");
-    localStorage.setItem("caracteristiques", JSON.stringify({age : age, poids : poids, taille : taille}))
-    startQuiz(current)
 
+    prerequis_questions();
+    set_dom_from_storage(["age", "poids", "taille"]);
+
+    // if (localStorage.getItem("age") === "null" && 
+    //     localStorage.getItem("poids") === "null" && 
+    //     localStorage.getItem("taille") === "null") {
+    //     $("#prerequis_div").hide();
+    // }
+    startQuiz(current)
 });
 
 startQuiz = (id)=>{
@@ -39,6 +98,8 @@ reponse = (id, c)=>{
     $(".question-card-body .btn.r" + c).addClass("btn-primary");
     questions[id].rep = questions[id].choice[c-1];
     $(".btn-next").removeClass("disabled");
+    
+    questionSuivante();
 }
 
 questionSuivante = () => {
