@@ -21,7 +21,7 @@ $("#login-form").submit(function(event) {
     success: function(result, statut) {
       if (result.status == "success") {
         localStorage.setItem("covid19_admin", JSON.stringify(result));
-        document.location.href="?page=accueil"
+        document.location.href="?page=questions"
       } else {
         $(".error-card").removeClass("d-none");
       }

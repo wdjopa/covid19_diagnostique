@@ -16,13 +16,13 @@
                             <li class="nav-item">
                                  <a class="nav-link <?=($page == "questions")?"active":""?>" href="?page=questions"><i class="fab fa-fw fa-wpforms"></i>Questions </a>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                  <a class="nav-link" href="?page=questions"><i class="fas fa-fw fa-table"></i>Forms</a>
                             </li>
                             
                             <li class="nav-item">
                                 <a class="nav-link" href="?page=questions" ><i class="fas fa-fw fa-chart-pie"></i>Chart</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </nav>
