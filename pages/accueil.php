@@ -19,9 +19,15 @@
     <div class="row  d-flex justify-content-center mt-4 mb-4">
         <div class="col-11">
             <a href="?page=diagnostique" class="btn btn-rounded text-uppercase p-3 mb-2 mt-2 w-100 btn-primary">Commencer le diagnostique</a>
-            <a href="?page=questions" class="btn btn-rounded text-uppercase  p-3 mb-2 mt-2 w-100 btn-danger">Poser les questions</a>
+            <a href="https://chat.whatsapp.com/G0bIlPb5NBP8OqW6PpjK48" class="btn btn-rounded text-uppercase  p-3 mb-2 mt-2 w-100 btn-danger">Poser des questions à des professionnels de la santé</a>
             <a href="?page=examens" class="btn btn-rounded  text-uppercase p-3 mb-2  mt-2 w-100 btn-info">Liste des centres d'examens</a>
         </div>
     </div>
 
 </div>
+<a href="https://www.dklo.co/#/cv/J91EBOny" class="float text-float" style="background: linear-gradient(to right, #FF8B00, #ff4400)!important; bottom: 11rem;" target="_blank">
+	    <img style="width: 2rem;" class="fa" src="https://cdn.shopify.com/s/files/1/0218/6533/2836/files/dikprtr_1.png?398">
+    </a>
+<a href="https://chat.whatsapp.com/G0bIlPb5NBP8OqW6PpjK48" class="float" target="_blank">
+	    <i class="fa fa-whatsapp my-float"></i>
+    </a>
