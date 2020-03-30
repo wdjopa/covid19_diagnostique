@@ -26,6 +26,32 @@ if(isset($_GET['page']) && in_array($_GET['page'].".php", $pages)){
     <meta property="og:url" content="https://lamater.tech/covid19" />
     <meta property="og:image" content="https://lamater.tech/covid19/images/virus.svg" />
     <meta property="og:site_name" content="Cameroon - Makers Against Covid-19 in Cameroon" />
+    <style>
+        @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css";
+
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 6rem;
+    right: 1.5rem;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+
+}
+.float:hover{
+    color: white;
+    text-decoration: none;
+}
+    </style>
 </head>
 <body>
     <?php include("incs/header.inc.php")?>
