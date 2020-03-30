@@ -9,7 +9,8 @@
                 <div class="card-body">
                     <h4 class="text-center">Note d'information</h4>
                     <p class="text-center pt-4">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam libero laboriosam corporis fuga quis sit, quia fugit illo, consequatur pariatur placeat laborum laudantium eligendi consectetur, minima totam cupiditate vero? Dicta?
+                        Obtenez une aide au diagnostique du COVID-19 à travers un ensemble de questions conçus à cet effet pour vous.
+                        Vous avez également la possibilité de discuter/échanger avec des personnels du corps médical pour leur poser des questions à propos du COVID-19. <br> Prenez soin de vous.
                     </p>
                 </div>
             </div>
