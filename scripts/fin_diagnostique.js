@@ -297,7 +297,7 @@ function  share() {
     copyToClipboard()
 }
  function copyToClipboard() {
-    let url = window.location.href;
+    let url = "https://lamater.tech/covid19";
     let selBox = document.createElement('textarea');
 
     selBox.style.position = 'fixed';
@@ -311,4 +311,5 @@ function  share() {
     selBox.setSelectionRange(0, 99999); /*For mobile devices*/
     document.execCommand('copy');
     document.body.removeChild(selBox);
+    alert("Lien copié")
  }
