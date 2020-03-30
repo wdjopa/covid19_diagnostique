@@ -32,6 +32,12 @@ if(isset($_GET['page']) && in_array($_GET['page'].".php", $pages)){
     <?php include("pages/$page.php") ?>
     <?php include("incs/footer.inc.php")?>
 
+<a href="https://www.dklo.co/#/cv/J91EBOny" class="float text-float" style="background: linear-gradient(to right, #FF8B00, #ff4400)!important; bottom: 11rem;" target="_blank">
+	    <img style="width: 2rem;" class="fa" src="https://cdn.shopify.com/s/files/1/0218/6533/2836/files/dikprtr_1.png?398">
+    </a>
+<a href="https://chat.whatsapp.com/G0bIlPb5NBP8OqW6PpjK48" class="float" target="_blank">
+	    <i class="fa fa-whatsapp my-float"></i>
+    </a>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
     <script src="scripts/<?=$page?>.js"></script>
