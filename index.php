@@ -78,7 +78,7 @@ if(isset($_GET['page']) && in_array($_GET['page'].".php", $pages)){
     s1.setAttribute('crossorigin','*');
     s0.parentNode.insertBefore(s1,s0);
     })();
-    </script>
+    </script> 
     <!--End of Tawk.to Script-->
 </body>
 </html>
