@@ -63,7 +63,15 @@ Prenez votre température deux fois par jour. Rappel des mesures d’hygiène`);
       "<span class='text-danger'> BESOIN DE SOINS EN URGENCE</span>"
     );
     $(".resultat .message").html(
-      `Aussi vite que vous le pouvez, contactez les numéros suivants (1510, ...) pour vous signaler votre cas auprès des autorités sanitaires compétentes pour votre prise en charge rapide. `
+      `Aussi vite que vous le pouvez, contactez les numéros suivants : 
+      <ul>
+      <li><a href="tel:1510">1510</a></li>
+      <li><a href="tel:677 89 93 69">677 89 93 69</a></li>
+      <li><a href="tel:677 89 43 64">677 89 43 64</a></li>
+      <li><a href="tel:677 89 76 44">677 89 76 44</a></li>
+      <li><a href="tel:677 90 01 57">677 90 01 57</a></li>
+      </ul>
+      Pour vous signaler auprès des autorités sanitaires compétentes afin de pouvoir vous prendre en charge rapidement. `
     );
     casurgent(resultat);
   }
