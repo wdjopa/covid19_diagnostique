@@ -57,3 +57,59 @@
     </div>
 
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="datasModal" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Informations</h5>
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+      </div>
+      <form id="dataForm">
+        <div class="modal-body">
+            <h5>
+                Pour pouvoir effectuer ce test, nous aurons besoin de quelques informations
+            </h5>
+            <small id="emailHelp" class="form-text text-muted">Vos informations ne seront partagées avec personne.</small>
+            <br>
+            <br>
+            <div class="form-group">
+                <label for="noms_form">Noms & Prenoms</label>
+                <input type="text" class="form-control" id="noms_form" name="noms" placeholder="Ex : Martin FOTSA" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+                <label for="age_form">Âge*</label>
+                <input type="number" min="1" max="120" class="form-control" placeholder="35" required id="age_form" name="age">
+            </div>
+
+            <div class="form-group">
+                <label for="quartier_form">Quartier - Ville *</label>
+                <input type="text" class="form-control" required placeholder="Ex : Biyem-Assi - Yaoundé" id="quartier_form" name="quartier">
+            </div>
+            <div class="form-group">
+                <label for="contact_personnel_form">Tel personnel*</label>
+                <input type="tel" class="form-control" required id="contact_personnel_form" placeholder="Ex : +237 6 55 55 55 55"  name="contact_personnel">
+            </div>
+
+            <div class="form-group">
+                <label for="adresse_professionnelle_form">Adresse professionnelle*</label>
+                <input type="text" class="form-control" placeholder="Ex : Ecole des postes - Yaoundé" required id="adresse_professionnelle_form" name="adresse_professionnelle">
+            </div>
+
+            <div class="form-group">
+                <label for="personne_a_contacter_form">Personne à contacter *</label>
+                <input type="text" class="form-control" required id="personne_a_contacter_form" placeholder="Ex : Mme FOTSA 699 99 99 99" name="personne_a_contacter">
+            </div>
+            <small>(*) : Champs obligatoires</small>
+        </div>
+        <div class="modal-footer">
+            <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+            <button type="submit" class="btn btn-primary">Enregistrer</button>
+        </div>
+        </form>
+    </div>
+  </div>
+</div>

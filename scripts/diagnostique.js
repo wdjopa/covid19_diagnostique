@@ -7,6 +7,7 @@ questionSuivante = () => {
 let questions = [],
   current = 0;
 
+
 /**
  * storage_set
  * This method will set parameters in the storage with localStorage
@@ -24,9 +25,11 @@ storage_set = (key, value = null, force = false, extra_string = "") => {
   ) {
     // if the value is null, then prompt
     if (value === null) {
-      value = prompt(
-        "Veuillez entrer votre " + key.split("_").join(" ") + " " + extra_string + ": "
-      );
+  $("#datasModal").modal({});
+
+    //   value = prompt(
+    //     "Veuillez entrer votre " + key.split("_").join(" ") + " " + extra_string + ": "
+    //   );
     }
 
     if (value !== "null" && value !== null) {
@@ -54,6 +57,7 @@ prerequis_questions = (force = false) => {
  
    // We set caracteristiques
   localStorage.setItem("caracteristiques",  JSON.stringify({
+      noms: localStorage.getItem("noms"),
       age: localStorage.getItem("age"),
       quartier: localStorage.getItem("quartier"),
       contact_personnel: localStorage.getItem("contact_personnel"),
@@ -67,8 +71,6 @@ prerequis_questions = (force = false) => {
       "age",
       "quartier",
       "contact_personnel",
-      "personne_a_contacter",
-      "adresse_professionnelle",
     ]);
   }
 };
@@ -84,6 +86,46 @@ set_dom_from_storage = (array_key) => {
 };
 
 
+$("#dataForm").submit(function (event) {
+  event.preventDefault();
+savePersonnalInformations()
+  $("#datasModal").modal("hide");
+
+});
+
+function savePersonnalInformations(force = false) {
+  storage_set("noms", $("#noms_form").val(), force);
+  storage_set("age", $("#age_form").val(), force);
+  // Let set le quartier
+  storage_set("quartier", $("#quartier_form").val(), force);
+  // Let set le contact personnel
+  storage_set("contact_personnel", $("#contact_personnel_form").val(), force);
+  // Let set le personne_a_contacter
+  storage_set(
+    "personne_a_contacter",
+    $("#personne_a_contacter_form").val(),
+    force
+  );
+  // Let set le adresse_professionnelle
+  storage_set(
+    "adresse_professionnelle",
+    $("#adresse_professionnelle_form").val(),
+    force
+  );
+
+  localStorage.setItem(
+    "caracteristiques",
+    JSON.stringify({
+      noms: localStorage.getItem("noms"),
+      age: localStorage.getItem("age"),
+      quartier: localStorage.getItem("quartier"),
+      contact_personnel: localStorage.getItem("contact_personnel"),
+      personne_a_contacter: localStorage.getItem("personne_a_contacter"),
+      adresse_professionnelle: localStorage.getItem("adresse_professionnelle"),
+    })
+  );
+}
+
 function lancement (){
     $(".total").html(questions.length + 1);
     $(".num").html(current + 1);
@@ -93,8 +135,6 @@ function lancement (){
       "age",
       "quartier",
       "contact personnel",
-      "personne à contacter",
-      "adresse professionnelle",
     ]);
 
     startQuiz(current);
