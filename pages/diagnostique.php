@@ -45,14 +45,14 @@
             <a href="#!" onclick="revenir()"  class="btn pt-2 pb-2 mr-2 w-100 btn-rounded btn-danger">Annuler</a>
             <!-- <a href="#!" onclick="questionSuivante()"  class="btn pt-2 pb-2  disabled btn-next w-50 ml-2 btn-rounded btn-primary">Continer</a> -->
         </div>
-        <div class="col-11 justify-content-between mt-4 text-uppercase" style="position: fixed; bottom: 0px;font-size: 13px;" id="prerequis_div">
+        <div class="col-11 justify-content-between mt-4 text-uppercase" style="font-size: 13px;" id="prerequis_div">
             <center>
                 Age: <b id="age">--</b>ans, Quartier: <b id="quartier">--</b>, Tel: <b id="contact_personnel">--</b>.
             </center>
             <b id="adresse_professionnelle" style="display: none">--</b>
             <b id="personne_a_contacter" style="display: none">--</b>
             <br/>
-            <button onclick="prerequis_questions(true)" class="btn pt-2 pb-2 mr-2 w-100 btn-rounded btn-primary">CHANGER</button>
+            <button onclick="prerequis_questions(true)" class="btn pt-2 pb-2 mr-2 w-100 btn-rounded btn-primary">CHANGER MES INFORMATIONS</button>
         </div>
     </div>
 
