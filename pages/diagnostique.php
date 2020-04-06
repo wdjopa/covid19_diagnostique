@@ -59,7 +59,7 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="datasModal" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" style="z-index: 10000000000000000000" id="datasModal" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
