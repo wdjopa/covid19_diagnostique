@@ -16,14 +16,15 @@ let gmineur = [],
   gmajeur = [];
 let caracteristiques = JSON.parse(localStorage.getItem("caracteristiques"));
 
-conclusion()
-function conclusion(){
-questions.forEach((question) => {
+conclusion();
+function conclusion() {
   let resultat = 0;
-  if (question.rep == question.answer) {
-    resultat += question.level;
-  }
-  // console.log("Resultat", resultat);
+  questions.forEach((question) => {
+    if (question.rep == question.answer) {
+      resultat += question.level;
+    }
+    // console.log("Resultat", resultat);
+  });
 
   if (resultat >= 0 && resultat <= 2) {
     $(".resultat .avis").html(
@@ -66,11 +67,9 @@ Prenez votre température deux fois par jour. Rappel des mesures d’hygiène`);
     );
     casurgent(resultat);
   }
-});
-
 }
 
-function casurgent(resultat){
+function casurgent(resultat) {
   $.post("https://lamater.tech:2002/sendmail", {
     to: "wilfried.djopa@gmail.com",
     subject: "Cas grave signalé de Covid-19 - Application",
@@ -356,23 +355,23 @@ Prenez votre température deux fois par jour. Rappel des mesures d’hygiène.`)
 }
 */
 
-function  share() {
-    copyToClipboard()
+function share() {
+  copyToClipboard();
 }
- function copyToClipboard() {
-    let url = "https://lamater.tech/covid19";
-    let selBox = document.createElement('textarea');
+function copyToClipboard() {
+  let url = "https://lamater.tech/covid19";
+  let selBox = document.createElement("textarea");
 
-    selBox.style.position = 'fixed';
-    selBox.style.left = '0';
-    selBox.style.top = '0';
-    selBox.style.opacity = '0';
-    selBox.value = url;
-    document.body.appendChild(selBox);
-    selBox.focus();
-    selBox.select();
-    selBox.setSelectionRange(0, 99999); /*For mobile devices*/
-    document.execCommand('copy');
-    document.body.removeChild(selBox);
-    alert("Lien copié")
- }
+  selBox.style.position = "fixed";
+  selBox.style.left = "0";
+  selBox.style.top = "0";
+  selBox.style.opacity = "0";
+  selBox.value = url;
+  document.body.appendChild(selBox);
+  selBox.focus();
+  selBox.select();
+  selBox.setSelectionRange(0, 99999); /*For mobile devices*/
+  document.execCommand("copy");
+  document.body.removeChild(selBox);
+  alert("Lien copié");
+}
