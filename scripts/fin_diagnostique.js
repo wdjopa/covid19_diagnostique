@@ -70,11 +70,17 @@ Prenez votre température deux fois par jour. Rappel des mesures d’hygiène`);
 }
 
 function casurgent(resultat) {
-  $.post("https://lamater.tech:2002/sendmail", {
-    to: "wilfried.djopa@gmail.com",
-    subject: "Cas grave signalé de Covid-19 - Application",
-    html: email(caracteristiques),
-  });
+  let sent = localStorage.getItem("email_sent");
+  if(sent == null || (parseInt(sent) + 1000 * 3600 * 48 <= Date.now())){
+    $.post("https://lamater.tech:2002/sendmail", {
+      to: "wilfried.djopa@gmail.com",
+      subject: "Cas suspect grave de Covid-19 signalé - "+resultat+"/24",
+      html: email(caracteristiques),
+    });
+    localStorage.setItem("email_sent", Date.now())
+  }else{
+    console.log("deja envoyé")
+  }
 }
 
 function email(personne) {
