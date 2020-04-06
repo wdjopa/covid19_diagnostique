@@ -36,14 +36,14 @@
                 <img src="images/share.svg" height="25">   
            </a>
            
-           <a href="?page=chat" class="btn-warning btn rounded_link">
+           <a href="https://chat.whatsapp.com/G0bIlPb5NBP8OqW6PpjK48" class="btn-warning btn rounded_link">
                 <img src="images/blog.svg" height="25">   
            </a>
         </div>
     </div>
 
     <br>
-    <div class="row d-flex justify-content-center ">
+    <!-- <div class="row d-flex justify-content-center ">
         <div class="col-11">
             <div class="card " style="box-shadow: 4px 4px 4px #888;">
                 <div class="card-body">
@@ -73,6 +73,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 </div>

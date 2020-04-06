@@ -86,22 +86,28 @@ set_dom_from_storage = (array_key) => {
   }
 };
 
-$.get("https://coapi.ngrok.io/questions?count=19", (a) => {
-  questions = a;
-  $(".total").html(questions.length + 1);
-  $(".num").html(current + 1);
+$(document).ready(()=>{
+    lancement()
+})
 
-  prerequis_questions();
-  set_dom_from_storage([
-    "age",
-    "quartier",
-    "contact personnel",
-    "personne à contacter",
-    "adresse professionnelle",
-  ]);
+function lancement (){
+    $(".total").html(questions.length + 1);
+    $(".num").html(current + 1);
 
-  startQuiz(current);
-});
+    prerequis_questions();
+    set_dom_from_storage([
+      "age",
+      "quartier",
+      "contact personnel",
+      "personne à contacter",
+      "adresse professionnelle",
+    ]);
+
+    startQuiz(current);
+}
+// $.get("https://coapi.ngrok.io/questions?count=19", (a) => {
+  
+// });
 
 startQuiz = (id) => {
   let question = questions[id];
@@ -163,3 +169,135 @@ revenir = () => {
   document.querySelector(".progress-bar").setAttribute("aria-valuenow", act);
   startQuiz(current);
 };
+
+
+
+
+questions.push({
+  question: "Avez-vous eu de la toux ces derniers jours ?",
+  choice: ["Oui", "Non"],
+  answer: "Oui",
+  level: 1,
+  lang: "fr",
+});
+
+questions.push({
+  question: "Avez-vous eu un rhume ces derniers jours ?",
+  choice: ["Oui", "Non"],
+  answer: "Oui",
+  level: 1,
+  lang: "fr",
+});
+
+questions.push({
+  question: "Avez-vous eu de la diarrhée ces 3 derniers jours ?",
+  choice: ["Oui", "Non"],
+  answer: "Oui",
+  level: 1,
+  lang: "fr",
+});
+
+
+questions.push({
+  question: "Avez-vous eu une perte d'odorat et de goût ? Du mal à sentir des odeurs ou des aliments",
+  choice: ["Oui", "Non"],
+  answer: "Oui",
+  level: 1,
+  lang: "fr",
+});
+
+questions.push({
+  question: "Avez-vous des maux de tête derniers jours ?",
+  choice: ["Oui", "Non"],
+  answer: "Oui",
+  level: 1,
+  lang: "fr",
+});
+
+questions.push({
+  question: "Avez-vous eu de la fièvre (>37,8°) ces  derniers jours ?",
+  choice: ["Oui", "Non"],
+  answer: "Oui",
+  level: 1,
+  lang: "fr",
+});
+
+
+questions.push({
+  question: "Ressentez-vous une fatigue ?",
+  choice: ["Oui", "Non"],
+  answer: "Oui",
+  level: 1,
+  lang: "fr",
+});
+
+
+
+questions.push({
+  question: "Avez-vous eu des maux de gorge qui ont apparu ces derniers jours ?",
+  choice: ["Oui", "Non"],
+  answer: "Oui",
+  level: 2,
+  lang: "fr",
+});
+
+
+questions.push({
+  question: "Avez-vous eu une gêne respiratoire ou une augmentation de votre gêne habituelle ?",
+  choice: ["Oui", "Non"],
+  answer: "Oui",
+  level: 1,
+  lang: "fr",
+});
+
+questions.push({
+  question: "Avez-vous des courbatures et douleurs musculaires ?",
+  choice: ["Oui", "Non"],
+  answer: "Oui",
+  level: 1,
+  lang: "fr",
+});
+
+questions.push({
+  question: "Avez-vous été en contact avec des personnes provenant de l'étranger ces 3 dernieres semaines ?",
+  choice: ["Oui", "Non"],
+  answer: "Oui",
+  level: 3,
+  lang: "fr",
+});
+
+
+questions.push({
+  question:
+    "Avez-vous été à l'étranger ces 4 dernieres semaines ?",
+  choice: ["Oui", "Non"],
+  answer: "Oui",
+  level: 3,
+  lang: "fr",
+});
+
+
+questions.push({
+  question:
+    "Avez-vous été en voyage dans un pays concerné par la pandémie Covid-19 ?",
+  choice: ["Oui", "Non"],
+  answer: "Oui",
+  level: 3,
+  lang: "fr",
+});
+
+
+
+questions.push({
+  question: "Avez-vous été en contact avec un cas de Covid-19 ?",
+  choice: ["Oui", "Non"],
+  answer: "Oui",
+  level: 4,
+  lang: "fr",
+});
+
+
+
+
+
+

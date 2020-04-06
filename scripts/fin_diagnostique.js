@@ -18,53 +18,56 @@ let caracteristiques = JSON.parse(localStorage.getItem("caracteristiques"));
 
 conclusion()
 function conclusion(){
-  let resultat = questions.map((question)=>{
-    let total = 0
-    if(question.rep == question.answer){
-      total+=question.level
-    }
-    return total;
-  })
+questions.forEach((question) => {
+  let resultat = 0;
+  if (question.rep == question.answer) {
+    resultat += question.level;
+  }
+  // console.log("Resultat", resultat);
 
-  if(resultat>=0 && resultat<=2){
+  if (resultat >= 0 && resultat <= 2) {
     $(".resultat .avis").html(
       "VOUS SEMBLEZ <span class='text-success'>NE PRESENTER AUCUN SIGNE</span>"
     );
-    $(".resultat .message").html(message);
+    // $(".resultat .message").html("");
     $(".resultat .precision").html(
       `Nous vous invitons à rester chez vous et à continuer à prendre soin de votre santé. Dès les premiers symptômes, contactez le <a class="text-danger bold" href="tel:1510">1510</a>.<br>Restez chez vous au maximum en attendant que les symptômes disparaissent.
   Prenez votre température deux fois par jour. Rappel des mesures d’hygiène.`
     );
     $(".resultat .img").attr("src", "images/diagnosis.svg");
-  }else if(resultat >=3 && resultat <=5){
+  } else if (resultat >= 3 && resultat <= 5) {
     $(".resultat .avis").html(
       "<span class='text-success'>REFAITES LE TEST DANS 2 JOURS</span>"
     );
-    $(".resultat .message").html(message);
+    // $(".resultat .message").html(message);
     $(".resultat .precision").html(
       `Nous vous invitons à rester chez vous et à continuer à prendre soin de votre santé. Buvez constamment de l'eau et ayez une bonne hygiène pour écarter tout risque. Dès les premiers symptômes, contactez le <a class="text-danger bold" href="tel:1510">1510</a>.<br>Restez chez vous au maximum en attendant que les symptômes disparaissent.
   Prenez votre température deux fois par jour. Rappel des mesures d’hygiène.`
     );
     $(".resultat .img").attr("src", "images/diagnosis.svg");
-  }else if(resultat >= 6 && resultat <=12){
-    $(".resultat .message").html(message);
+  } else if (resultat >= 6 && resultat <= 12) {
+    // $(".resultat .message").html(message);
     $(".resultat .avis").html(
       "VOUS SEMBLEZ <span class='text-success'>PRESENTER QUELQUES SIGNES</span>"
     );
-    $(".resultat .precision").html(`Nous vous conseillons d'effectuer une consultation médicale. Vous pouvez contacter des médecins en cliquant sur les boutons Whatsapp qui sont situés à droite. Des medecins reviendrons vers vous le plus rapidement possible. <br> Vous pouvez également appeler
+    $(".resultat .precision")
+      .html(`Nous vous conseillons d'effectuer une consultation médicale. Vous pouvez contacter des médecins en cliquant sur les boutons Whatsapp qui sont situés à droite. Des medecins reviendrons vers vous le plus rapidement possible. <br> Vous pouvez également appeler
 le 1510 si une gêne respiratoire ou des difficultés importantes pour s’alimenter ou boire pendant
 plus de 24h apparaissent.<br>Restez chez vous au maximum en attendant que les symptômes disparaissent.
 Prenez votre température deux fois par jour. Rappel des mesures d’hygiène`);
     $(".resultat .img").attr("src", "images/hand-wash.svg");
-  }else{
-     $(".resultat .img").attr("src", "images/virus (1).svg");
-     $(".resultat .avis").html(
-       "<span class='text-danger'> BESOIN DE SOINS EN URGENCE</span>"
-     );
-     $(".resultat .message")
-       .html(`Aussi vite que vous le pouvez, contactez les numéros suivants (1510, ...) pour vous signaler votre cas auprès des autorités sanitaires compétentes pour votre prise en charge rapide. `);
-       casurgent(resultat);
+  } else {
+    $(".resultat .img").attr("src", "images/virus (1).svg");
+    $(".resultat .avis").html(
+      "<span class='text-danger'> BESOIN DE SOINS EN URGENCE</span>"
+    );
+    $(".resultat .message").html(
+      `Aussi vite que vous le pouvez, contactez les numéros suivants (1510, ...) pour vous signaler votre cas auprès des autorités sanitaires compétentes pour votre prise en charge rapide. `
+    );
+    casurgent(resultat);
   }
+});
+
 }
 
 function casurgent(resultat){
